@@ -19,12 +19,12 @@
       </div>
       <div class="col">
         <div>
-          <ion-list ng-repeat="pos in mon">
-            <ion-item ng-class="{monument: $index % 2 == 0}" >Monument: {{pos.monument}}
-            <div class="wrap item-text-wrap" style="word-wrap: break-word; word-break: break-all;">Description: {{pos.description}}
+
+            <ion-item class="wrap item-text-wrap" style="word-wrap: break-word; word-break: break-all;"> Monument: {{mon.monument.monument}}
+            <div class="wrap item-text-wrap" style="word-wrap: break-word; word-break: break-all;">Description: {{mon.monument.description}}
             </div>
           </ion-item>
-          </ion-list>
+
       </div>
     </div>
     </div>

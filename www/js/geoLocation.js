@@ -8,7 +8,7 @@ angular.module('starter.geoLocation', [])
     .controller('MapGeoCtrl', function ($scope, $ionicLoading, $ionicPopup, GeoList) {
 
         $scope.positions = GeoList.getAll();
-        $scope.mon = [];
+        $scope.mon = {dis:100, monument:null};
         $scope.$on('mapInitialized', function (event, map) {
             $scope.map = map;
         });
@@ -43,7 +43,8 @@ angular.module('starter.geoLocation', [])
 
                     //console.log((dis / 1000) + " km")
                   console.log(dis, mark.monument);
-                  if (dis >= 10)$scope.mon.push(mark);
+                  if (dis <= 10) if (dis < $scope.mon.dis)$scope.mon = {dis:dis, monument: mark};
+
 
 
 
