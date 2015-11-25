@@ -1,6 +1,6 @@
 /**
  * Created by Esben on 23/09/2015.
- *
+ */
 angular.module('starter.cameraController', [])
 
 .controller('cameraControl', function($scope, camera){
@@ -38,5 +38,4 @@ angular.module('starter.cameraController', [])
     }
 }]);
 
- */
 

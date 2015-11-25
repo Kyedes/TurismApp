@@ -8,12 +8,10 @@ angular.module('starter.geoLocation', [])
     .controller('MapGeoCtrl', function ($scope, $ionicLoading, $ionicPopup, GeoList) {
 
         $scope.positions = GeoList.getAll();
-
+        $scope.mon = [];
         $scope.$on('mapInitialized', function (event, map) {
             $scope.map = map;
         });
-
-
         $scope.centerOnMe = function () {
 
             //If you want
@@ -32,8 +30,9 @@ angular.module('starter.geoLocation', [])
             };
 
             function success(position) {
-                var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-                $scope.positions.push({lat: position.coords.latitude, lng: position.coords.longitude});
+
+              var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+              // $scope.positions.push({lat: position.coords.latitude, lng: position.coords.longitude}); //Adds location to array?
                 console.log(position.coords.latitude);
                 console.log(position.coords.longitude);
                 $scope.map.setCenter(pos);
@@ -42,15 +41,20 @@ angular.module('starter.geoLocation', [])
 
                     var dis = calculateDistance(position.coords, mark);
 
-                    console.log((dis / 1000) + " km")
+                    //console.log((dis / 1000) + " km")
+                  console.log(dis, mark.monument);
+                  if (dis >= 10)$scope.mon.push(mark);
 
 
-                })
+
+
+                });
+              console.log($scope.mon);
 
 
                 $ionicLoading.hide();
 
-            };
+            }
 
             function error(error) {
                 console.log(error);
@@ -59,7 +63,7 @@ angular.module('starter.geoLocation', [])
                     title: "Error code: " + error.code,
                     template: error.message
                 });
-            };
+            }
 
             // This is our get position function!
             navigator.geolocation.getCurrentPosition(success, error, options);
@@ -68,7 +72,7 @@ angular.module('starter.geoLocation', [])
             /* function to calc radius */
             var rad = function (x) {
                 return x * Math.PI / 180;
-            }
+            };
 
             /* CALCULATE DISTANCE */
             function calculateDistance(p1, p2) {
