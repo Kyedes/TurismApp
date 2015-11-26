@@ -14,6 +14,18 @@ angular.module('starter.geoLocation', [])
         });
         $scope.centerOnMe = function () {
 
+            camera.getPicture().then(function(imageURI) {
+            $scope.photo = imageURI;
+
+            // imageURI is the URL of the image that we can use for
+            // an <img> element or backgroundImage.
+
+          }, function(err) {
+            // Ruh-roh, something bad happened
+            console.err(err);
+          }, cameraOptions);
+
+
             //If you want
             //$scope.positions = [];
 
@@ -90,8 +102,29 @@ angular.module('starter.geoLocation', [])
         }
     })
 
-    .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-       $scope.chat = Chats.get($stateParams.chatId);
-    })
+
+
+  .factory('Camera', ['$q', function($q) {
+
+    return {
+      getPicture: function(options) {
+        var q = $q.defer();
+
+        navigator.camera.getPicture(function(result) {
+          // Do any magic you need
+          q.resolve(result);
+        }, function(err) {
+          q.reject(err);
+        }, options);
+
+        return q.promise;
+      }
+    }
+  }])
+
+
+  .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+    $scope.chat = Chats.get($stateParams.chatId);
+  })
 
 ;
