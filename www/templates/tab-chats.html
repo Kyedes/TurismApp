@@ -9,7 +9,7 @@
     </button>
     <!--<div class="card">-->
     <div class="row">
-      <div class="col col-50">
+      <ion-item class="col col-50">
         <img ng-src="{{photo}}" />
         <div class="mapWrap"  data-tap-disabled="true">
           <map center="55.69273,12.599" zoom="7">
@@ -17,7 +17,7 @@
             <marker icon="/img/geo-icon.png" size="24" ng-repeat="pos in positions" position="{{pos.lat}},{{pos.lng}}"></marker>
           </map>
         </div>
-      </div>
+      </ion-item>
       <div class="col">
         <ion-item class="wrap item-text-wrap" style="word-wrap: break-word; word-break: break-all;"> Monument: {{mon.monument.monument}}
           <div class="wrap item-text-wrap" style="word-wrap: break-word; word-break: break-all;">Description: {{mon.monument.description}}

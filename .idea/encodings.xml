@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/../TurismAlpha/www/templates/home.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cameratest/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cameratest/www/js/cameraController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cameratest/www/templates/cameraTest.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/cameraController.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
