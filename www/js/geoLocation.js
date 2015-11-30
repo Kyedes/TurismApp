@@ -8,7 +8,7 @@ angular.module('starter.geoLocation', [])
   .controller('MapGeoCtrl', function ($scope, $ionicLoading, $ionicPopup, GeoList, Camera) {
 
     $scope.positions = GeoList.getAll();
-    $scope.mon = {dis:100, monument:null};
+    $scope.mon = {dis:1000, monument:null};
 
     $scope.$on('mapInitialized', function (event, map) {
       $scope.map = map;
@@ -65,10 +65,10 @@ angular.module('starter.geoLocation', [])
 
           //console.log((dis / 1000) + " km")
           console.log(dis, mark.monument);
-          if (dis <= 10) if (dis < $scope.mon.dis)$scope.mon = {dis:dis, monument: mark};
+          if (dis <= 100) if (dis < $scope.mon.dis)$scope.mon = {dis:dis, monument: mark};
 
         });
-        if ($scope.mon.monument == null)$scope.mon = {dis:100, monument: {monument: "Error 404", description:"No monument found within 10 meters"}};
+        if ($scope.mon.monument == null)$scope.mon = {dis:1000, monument: {monument: "Error 404", description:"No monument found within 10 meters"}};
         console.log($scope.mon);
 
 

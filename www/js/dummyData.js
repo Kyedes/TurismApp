@@ -12,13 +12,13 @@ angular.module('starter.dummyData', [])
                     {monument: "Børsen", description:"Børsen (English: The Stock Exchange) is a building on Slotsholmen in central Copenhagen, Denmark. It was built by Christian IV in 1619–1640 and is the oldest stock exchange in Denmark. It is known especially for its Dragon Spire shaped as the tails of four dragons twined together, reaching a height of 56 metres." , lat: 55.6755013, lng: 12.5840127},
                     {monument: "The Statue of Absalon", description:"Absalon or Axel (c.?1128 – 21 March 1201) was a Danish archbishop and statesman, who was the Bishop of Roskilde from 1158 to 1192 and Archbishop of Lund from 1178 until his death. He was the foremost politician and churchfather of Denmark in the second half of the 12th century, and was the closest advisor of King Valdemar I of Denmark. He was a key figure in the Danish policies of territorial expansion in the Baltic Sea, Europeanization in close relationship with the Holy See, and reform in the relation between the Church and the public. He combined the ideals of Gregorian Reform ideals with loyal support of a strong monarchical power." , lat: 55.677959, lng: 12.579989},
                     {monument: "CBS", description:"The best school ever" , lat: 55.681546, lng: 12.5309561}
-                   // ,{monument: "", description:"" , lat: 55.6000, lng: 12.5800},
-                   // {monument: "", description:"" , lat: 55.6000, lng: 12.5800},
-                   // {monument: "", description:"" , lat: 55.6000, lng: 12.5800},
-                   // {monument: "", description:"" , lat: 55.6000, lng: 12.5800},
-                   // {monument: "", description:"" , lat: 55.6000, lng: 12.5800},
-                   // {monument: "", description:"" , lat: 55.6000, lng: 12.5800},
-                   // {monument: "", description:"" , lat: 55.6000, lng: 12.5800},
+                   ,{monument: "Kilen", description:"Classrooms and Offices for CBS" , lat: 55.681129, lng: 12.524841}
+                   ,{monument: "Dalgas Have Øst", description:"Classrooms and Exam rooms for CBS, the east wing" , lat: 55.683452, lng: 12.516413}
+                   ,{monument: "Dalgas Have Vest", description:"Classrooms and Exam rooms for CBS, the west wing" , lat: 55.683785, lng: 12.514557}
+                   // ,{monument: "", description:"" , lat: 55.6000, lng: 12.5800}
+                   // ,{monument: "", description:"" , lat: 55.6000, lng: 12.5800}
+                   // ,{monument: "", description:"" , lat: 55.6000, lng: 12.5800}
+                   // ,{monument: "", description:"" , lat: 55.6000, lng: 12.5800}
                 ]
             ;
 
